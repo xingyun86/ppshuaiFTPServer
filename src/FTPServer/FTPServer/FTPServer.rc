@@ -1,0 +1,727 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\FTPServer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_FTPSERVER           ICON    DISCARDABLE     "res\\ftp.ico"
+IDI_USER                ICON    DISCARDABLE     "res\\user.ico"
+IDI_HOME                ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_LOG                 ICON    DISCARDABLE     "res\\icon2.ico"
+IDI_ONLINE_USERS        ICON    DISCARDABLE     "res\\users.ico"
+IDI_LED_RED             ICON    DISCARDABLE     "res\\led_red.ico"
+IDI_LED_OFF             ICON    DISCARDABLE     "res\\led_off.ico"
+IDI_LED_GREEN           ICON    DISCARDABLE     "res\\led_gree.ico"
+IDI_SECURITY            ICON    DISCARDABLE     "res\\settings.ico"
+IDI_NONE                ICON    DISCARDABLE     "res\\none.ico"
+IDI_STATISTICS          ICON    DISCARDABLE     "res\\statistics.ico"
+IDI_CONFIGURATION       ICON    DISCARDABLE     "res\\configur.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_APPLICATION DIALOGEX 0, 0, 400, 250
+STYLE DS_3DLOOK | DS_CENTER | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "FTP Server"
+MENU IDR_MAINMENU
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_OUTLOOKBAR,"SysListView32",WS_BORDER | 
+                    WS_TABSTOP,2,4,66,244
+    CONTROL         "",IDC_STATIC1,"Static",SS_ETCHEDHORZ,0,0,400,1
+    CONTROL         "",IDC_INFOBAR,"Static",SS_GRAYRECT | SS_NOTIFY,71,4,327,
+                    14
+    CONTROL         "",IDC_DIALOG_AREA,"Static",SS_GRAYFRAME | NOT 
+                    WS_VISIBLE,71,23,327,226,WS_EX_TRANSPARENT
+END
+
+IDD_USERACCOUNTS DIALOGEX 0, 0, 400, 225
+STYLE WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "User Accounts"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&OK",IDOK,288,200,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,341,200,50,14
+    GROUPBOX        "Directory Permissions",IDC_STATIC3,176,43,221,150,0,
+                    WS_EX_TRANSPARENT
+    CONTROL         "List3",IDC_DIR_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    LVS_EDITLABELS | WS_BORDER | WS_TABSTOP,182,56,209,110
+    GROUPBOX        "&Users Accounts",IDC_STATIC1,3,1,167,192,0,
+                    WS_EX_TRANSPARENT
+    GROUPBOX        "General",IDC_STATIC2,176,1,221,38,0,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_PASSWORD,219,16,94,12,ES_PASSWORD | ES_AUTOHSCROLL
+    PUSHBUTTON      "&Add...",IDC_ADD_USER,9,172,50,14
+    PUSHBUTTON      "A&dd...",IDC_ADD_DIR,182,172,50,14
+    PUSHBUTTON      "Ed&it...",IDC_EDIT_DIR,235,172,50,14
+    PUSHBUTTON      "Set as &Home",IDC_SET_HOME,341,172,50,14
+    PUSHBUTTON      "Dele&te",IDC_DEL_DIR,288,172,50,14
+    LTEXT           "Password:",IDC_STATIC,182,19,36,8
+    PUSHBUTTON      "&Edit...",IDC_EDIT_USER,62,172,50,14
+    PUSHBUTTON      "&De&lete",IDC_DEL_USER,115,172,50,14
+    CONTROL         "Disable A&ccount",IDC_DISABLE_ACCOUNT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,321,18,68,10
+    CONTROL         "List1",IDC_USERS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    WS_BORDER | WS_TABSTOP,9,13,156,153
+    PUSHBUTTON      "&Wizard...",IDC_WIZARD,9,200,50,14
+END
+
+IDD_ADD_DIRECTORY DIALOG DISCARDABLE  0, 0, 200, 202
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Directory"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,4,182,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,144,182,50,14
+    GROUPBOX        "Physical Path",IDC_STATIC,4,3,190,36
+    EDITTEXT        IDC_PATH,11,17,156,12,ES_AUTOHSCROLL
+    GROUPBOX        "Permissons",IDC_STATIC,4,99,190,77
+    PUSHBUTTON      "..",IDC_BROWSE,172,17,16,13
+    GROUPBOX        "Virtual Directory",IDC_STATIC,4,44,190,51
+    CONTROL         "Show as virtual directory",IDC_VIRTUALDIR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,58,93,10
+    LTEXT           "Alias:",IDC_STATIC,10,77,18,8
+    EDITTEXT        IDC_ALIAS,33,74,152,12,ES_AUTOHSCROLL
+    CONTROL         "Allow Download",IDC_DOWNLOAD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,112,67,10
+    CONTROL         "Allow Upload",IDC_UPLOAD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,124,57,10
+    CONTROL         "Allow Rename",IDC_RENAME,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,136,61,10
+    CONTROL         "Allow Delete",IDC_DELETE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,11,148,55,10
+    CONTROL         "Allow Create Directory",IDC_CREATE_DIR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,160,85,10
+END
+
+IDD_ADD_IP DIALOG DISCARDABLE  0, 0, 186, 69
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add IP address"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_IPADDRESS,6,23,174,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,5,48,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,130,48,50,14
+    LTEXT           "Enter an IP address:",IDC_STATIC,6,10,65,8
+END
+
+IDD_PROPPAGE_TRACE DIALOG DISCARDABLE  0, 0, 280, 162
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_TRACE,0,0,279,161,LBS_OWNERDRAWVARIABLE | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_PROPPAGE_ONLINE DIALOG DISCARDABLE  0, 0, 280, 162
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_ONLINE_USERS,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,0,0,279,161
+END
+
+IDD_PROPPAGE_CONFIGURATION DIALOG DISCARDABLE  0, 0, 275, 197
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Welcome message:",IDC_STATIC,3,57,63,8
+    LTEXT           "Goodbye Message:",IDC_STATIC,3,73,62,8
+    LTEXT           "FTP Port:",IDC_STATIC,3,9,31,8
+    EDITTEXT        IDC_PORT,75,7,50,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Launch FTP Server at windows startup",
+                    IDC_LAUNCH_ON_STARTUP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,4,108,139,10
+    CONTROL         "Startup minimized in systemtray",IDC_START_IN_TRAY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,121,113,10
+    LTEXT           "Max. users:",IDC_STATIC,3,25,37,8
+    EDITTEXT        IDC_MAX_USERS,75,23,50,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Connection Timeout:",IDC_STATIC,3,41,66,8
+    EDITTEXT        IDC_TIMEOUT,75,39,50,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_WELCOME_MSG,75,55,194,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GOODBYE_MSG,75,71,194,12,ES_AUTOHSCROLL
+    LTEXT           "minutes.",IDC_STATIC,130,41,27,8
+    CONTROL         "Automatically activate server at startup",
+                    IDC_AUTOACTIVATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,
+                    134,137,10
+    COMBOBOX        IDC_LOGLEVEL,75,87,50,48,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Loglevel:",IDC_STATIC,3,89,62,8
+    PUSHBUTTON      "View Log",IDC_VIEW,165,87,50,14
+    PUSHBUTTON      "&Clear Log",IDC_CLEAR,219,87,50,14
+    PUSHBUTTON      "&Apply",IDC_APPLY,219,176,50,14
+    LTEXT           "Application Name:",IDC_STATIC,3,152,58,8
+    EDITTEXT        IDC_APPLICATIONNAME,75,150,194,12,ES_AUTOHSCROLL
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 234, 178
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "FTP Server Aboutbox - Version 1.0 Build 008"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Static",IDC_STARWARS,0,0,233,177,SS_NOTIFY
+END
+
+IDD_PROPPAGE_STATISTICS DIALOG DISCARDABLE  0, 0, 280, 162
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "List1",IDC_STATISTICS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | 
+                    WS_TABSTOP,0,0,279,161
+END
+
+IDD_PROPPAGE_SECURITY DIALOG DISCARDABLE  0, 0, 316, 230
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_BLOCKEDLIST,0,11,315,60,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Add",IDC_ADD_BLOCK,0,75,50,14
+    PUSHBUTTON      "&Remove",IDC_REMOVE_BLOCK,108,75,50,14
+    PUSHBUTTON      "&Edit",IDC_EDIT_BLOCK,54,75,50,14
+    LISTBOX         IDC_NONBLOCKEDLIST,0,108,315,61,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&Block all IP addresses except:",IDC_BLOCK_ALL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,0,96,111,10
+    LTEXT           "Block the following IP addresses:",IDC_STATIC1,0,0,105,
+                    8
+    PUSHBUTTON      "A&dd",IDC_ADD_NONBLOCK,0,173,50,14
+    PUSHBUTTON      "Re&move",IDC_REMOVE_NONBLOCK,108,173,50,14
+    PUSHBUTTON      "Edi&t",IDC_EDIT_NONBLOCK,54,173,50,14
+    LTEXT           "Local IP Address 1:",IDC_STATIC,0,198,62,8
+    EDITTEXT        IDC_IPADDRESS1,90,197,68,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Local IP Address 2:",IDC_STATIC,0,212,62,8
+    EDITTEXT        IDC_IPADDRESS2,90,211,68,12,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_ADD_USER DIALOG DISCARDABLE  0, 0, 186, 69
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add User"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_NAME,6,23,174,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,5,48,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,130,48,50,14
+    LTEXT           "Enter a username:",IDC_STATIC,6,10,58,8
+END
+
+IDD_WIZARD_FINISH DIALOG DISCARDABLE  0, 0, 317, 193
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "User Account Wizard"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "You have successfully entered all of the information required to create a new account.\n\nTo save these settings, click Finish.",
+                    IDC_STATIC,114,10,200,72
+END
+
+IDD_WIZARD_PAGE1 DIALOG DISCARDABLE  0, 0, 317, 143
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "User Account Wizard"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_ACCOUNTNAME,70,50,125,12,ES_AUTOHSCROLL
+    LTEXT           "Account Name:",IDC_STATIC,8,52,50,8
+    LTEXT           "When you want to connect to this FTP server you need a valid account.\nType the name of the account you want to create.",
+                    IDC_STATIC,8,10,268,27
+END
+
+IDD_WIZARD_PAGE2 DIALOG DISCARDABLE  0, 0, 317, 143
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "User Account Wizard"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_PASSWORD,72,50,126,12,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "Password:",IDC_STATIC,8,52,53,10
+    LTEXT           "Confirm Password:",IDC_STATIC,8,70,59,8
+    EDITTEXT        IDC_CONFIRMPASSWORD,72,68,126,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Type the password for this account and retype it to confirm.\nIf you don't want a password for this account, leave it blank. In this case any password will be accepted during logon.",
+                    IDC_STATIC,8,10,288,30
+END
+
+IDD_WIZARD_PAGE3 DIALOG DISCARDABLE  0, 0, 317, 143
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "User Account Wizard"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_HOMEDIRECTORY,70,50,125,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Browse...",IDC_BROWSE,200,49,50,14
+    LTEXT           "Home Directory:",IDC_STATIC,8,52,53,8
+    LTEXT           "Specify the home directory for this account. ",
+                    IDC_STATIC,8,10,139,8
+END
+
+IDD_WIZARD_PAGE4 DIALOG DISCARDABLE  0, 0, 317, 143
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "User Account Wizard"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Allow Download",IDC_DOWNLOAD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,42,67,10
+    CONTROL         "Allow Upload",IDC_UPLOAD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,54,57,10
+    CONTROL         "Allow Rename",IDC_RENAME,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,66,61,10
+    CONTROL         "Allow Delete",IDC_DELETE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,78,55,10
+    CONTROL         "Allow Create Directory",IDC_CREATE_DIR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,90,85,10
+    LTEXT           "What kind of permissions would you like to give this account on the home directory?",
+                    IDC_STATIC,8,10,264,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,8
+ PRODUCTVERSION 1,0,0,8
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x9L
+#else
+ FILEFLAGS 0x8L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Programmed by Pablo\0"
+            VALUE "CompanyName", "Pablo Software Solutions\0"
+            VALUE "FileDescription", "FTPServer MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 8\0"
+            VALUE "InternalName", "FTPServer\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "FTPServer.EXE\0"
+            VALUE "PrivateBuild", "Version 1.08\0"
+            VALUE "ProductName", "FTPServer Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 8\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_APPLICATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 393
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 243
+    END
+
+    IDD_USERACCOUNTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 393
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+    END
+
+    IDD_ADD_DIRECTORY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_ADD_IP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 62
+    END
+
+    IDD_PROPPAGE_TRACE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_PROPPAGE_ONLINE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_PROPPAGE_CONFIGURATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 227
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_PROPPAGE_STATISTICS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_PROPPAGE_SECURITY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_ADD_USER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 62
+    END
+
+    IDD_WIZARD_FINISH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_WIZARD_PAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_WIZARD_PAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_WIZARD_PAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_WIZARD_PAGE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_POPUP_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "popup"
+    BEGIN
+        MENUITEM "About...",                    ID_APP_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "Show Dialog...",              ID_APP_SHOW
+        MENUITEM SEPARATOR
+        MENUITEM "Shutdown Server",             ID_APP_EXIT
+    END
+END
+
+IDR_MAINMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Server"
+    BEGIN
+        MENUITEM "&Start",                      ID_SERVER_START
+        MENUITEM "S&top",                       ID_SERVER_STOP
+        MENUITEM SEPARATOR
+        MENUITEM "User Account &Wizard...",     ID_ACCOUNT_WIZARD
+        MENUITEM "&User Accounts...",           ID_USER_ACCOUNTS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_SERVER_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Server &Trace",               IDC_VIEW_TRACE
+        MENUITEM "&Online Users",               IDC_VIEW_ONLINE_USERS
+        MENUITEM "&Configuration",              IDC_VIEW_CONFIGURATION
+        MENUITEM "St&atistics",                 IDC_VIEW_STATISTICS
+        MENUITEM "&Security",                   IDC_VIEW_SECURITY
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_INDEX
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   ID_HELP_ABOUT
+    END
+END
+
+IDR_INFOBARMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "infobar"
+    BEGIN
+        MENUITEM "Server Trace",                IDC_VIEW_TRACE
+        MENUITEM "Online Users",                IDC_VIEW_ONLINE_USERS
+        MENUITEM "Configuration",               IDC_VIEW_CONFIGURATION
+        MENUITEM "Statistics",                  IDC_VIEW_STATISTICS
+        MENUITEM "Security",                    IDC_VIEW_SECURITY
+    END
+END
+
+IDR_TRACE_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "trace"
+    BEGIN
+        MENUITEM "&Clear",                      ID_TRACE_CLEAR
+    END
+END
+
+IDR_ONLINE_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "online"
+    BEGIN
+        MENUITEM "Kick User(s)",                IDC_KICK_USER
+        MENUITEM "Edit User Account",           IDC_EDIT_USER
+        MENUITEM "Block this IP address",       IDC_BLOCK_IP
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_PROPPAGE_CONFIGURATION DLGINIT
+BEGIN
+    IDC_LOGLEVEL, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_LOGLEVEL, 0x403, 6, 0
+0x7245, 0x6f72, 0x0072, 
+    IDC_LOGLEVEL, 0x403, 8, 0
+0x6157, 0x6e72, 0x6e69, 0x0067, 
+    IDC_LOGLEVEL, 0x403, 6, 0
+0x7254, 0x6361, 0x0065, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR1 TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_SERVER_START
+    BUTTON      ID_SERVER_STOP
+    SEPARATOR
+    BUTTON      ID_ACCOUNT_WIZARD
+    BUTTON      ID_USER_ACCOUNTS
+    SEPARATOR
+    BUTTON      ID_HELP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR1            BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+IDB_BANNER              BITMAP  DISCARDABLE     "res\\banner.bmp"
+IDB_WATERMARK           BITMAP  DISCARDABLE     "res\\watermark.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About FTPServer..."
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_DATA_RECEIVED "0 bytes received"
+    ID_INDICATOR_ONLINELED  " "
+    ID_INDICATOR_OFFLINELED " "
+    ID_INDICATOR_DATA_SEND  "0 bytes sent"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SERVER_START         "Start FTP Server\nStart FTP Server"
+    ID_SERVER_STOP          "Stop FTP Server\nStop FTP Server"
+    ID_HELP_ABOUT           "Aboutbox\nAboutbox"
+    ID_USER_ACCOUNTS        "Add/Edit User Accounts\nAdd/Edit User Accounts"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HEADERTITLE1        "Account Name"
+    IDS_HEADERTITLE2        "Account Password"
+    IDS_HEADERTITLE3        "Home Directory"
+    IDS_HEADERTITLE4        "Permissions"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_USERS               "Edit User Accounts\nEdit User Accounts"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDC_ABOUT               "Aboutbox\nAboutbox"
+    ID_ACCOUNT_WIZARD       "User Account Wizard\nUser Account Wizard"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\FTPServer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
